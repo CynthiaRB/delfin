@@ -220,6 +220,58 @@
 .hero-animated {
   animation: backgroundShift 12s infinite ease-in-out;
 }
+.testimonial-carousel {
+  overflow-x: hidden;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.testimonial-track {
+  display: flex;
+  animation: scrollTestimonials 40s linear infinite;
+  gap: 30px;
+}
+
+.testimonial {
+  min-width: 300px;
+  max-width: 300px;
+  background-color: #f5f8fb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial span {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+}
+
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1800px); }
+}
+
+@media (max-width: 768px) {
+  .testimonial-track {
+    animation-duration: 60s;
+  }
+}
 
   </style>
 </head>
@@ -374,6 +426,45 @@
   </div>
 </section>
 
+<section id="testimonios" style="background: #ffffff; padding: 60px 20px;">
+  <h2 style="text-align:center; font-size: 28px; margin-bottom: 40px;">What Our Clients Say</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-track">
+      
+      <!-- Testimonios individuales -->
+      <div class="testimonial">
+        <p>“Delfin Partners has been instrumental in helping us diversify our portfolio across emerging markets. Their insights are unmatched.”</p>
+        <span>— Laura M., Institutional Investor, USA</span>
+      </div>
+
+      <div class="testimonial">
+        <p>“Their team truly understands the complexities of cross-border investments. We've seen excellent results.”</p>
+        <span>— Carlos R., Family Office, Mexico</span>
+      </div>
+
+      <div class="testimonial">
+        <p>“Their ESG approach aligns perfectly with our values and long-term vision. Highly recommended.”</p>
+        <span>— Sofía B., ESG Director, Argentina</span>
+      </div>
+
+      <div class="testimonial">
+        <p>“Working with Delfin Partners gave us the clarity and confidence we needed to make major allocation shifts.”</p>
+        <span>— Jonathan E., CIO, Private Equity Fund</span>
+      </div>
+
+      <div class="testimonial">
+        <p>“Their cross-border tax expertise and regulatory guidance saved us significant time and costs.”</p>
+        <span>— Andrés G., Wealth Manager, Peru</span>
+      </div>
+
+      <div class="testimonial">
+        <p>“Delfin’s strategic insights helped us reframe our risk strategy and align better with our long-term mission.”</p>
+        <span>— Marie C., Director, Institutional Fund, France</span>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- CTA para leads -->
